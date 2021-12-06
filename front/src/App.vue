@@ -1,16 +1,17 @@
 <template>
   <div class="grid place-items-center">
-    <input placeholder="Collez votre lien pour le réduire" />
-    <p>fjkhdjkfdhkj</p>
+    <Input />
   </div>
 </template>
 
 <script>
+import Input from './components/Input.vue'
 import './assets/tailwind.css'
 
 export default {
   name: 'App',
   components: {
+    Input
   }
 }
 </script>
