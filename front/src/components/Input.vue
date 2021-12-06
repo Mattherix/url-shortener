@@ -1,7 +1,7 @@
 <template>
   <input
     placeholder="Collez le lien que vous voulez réduire"
-    class="my-3 p-4 w-10/12 text-3xl text-center rounded-full 
+    class="my-3 p-4 w-10/12 text-3xl text-center rounded-full bg
     focus:outline-none focus:ring-8 focus:ring-blue-400 focus:ring-opacity-50 focus:shadow-lg" 
     v-model="url" @keyup.enter="shorten"/>
 </template>
@@ -9,6 +9,7 @@
 <script>
 export default {
   name: 'Input',
+  emits: ["newUrl"],
   data() {
     return {
       id: 0,
@@ -25,6 +26,8 @@ export default {
       }
       localStorage.setItem(this.id, JSON.stringify(data))
       this.url = ''
+
+      this.$emit('newUrl', this.id.toString())
       /*
       localStorage.setItem(this.id, fetch('shorten', {
         method: 'post',
