@@ -2,6 +2,6 @@
 
 - Chef de projet :
 - Developpeur front: 
-- Developpeur back: 
+- Developpeur back: @TDupuisR
 - Gérant du Wiki : @tutur02
 - Quality assurance: 
