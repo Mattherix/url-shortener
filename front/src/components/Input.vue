@@ -19,6 +19,7 @@ export default {
   },
   methods: {
     shorten() {
+      /* Send a request to get the shorten link */
       this.id = Math.floor((Math.random() * 10000) + 1)
       var data = {
         url: this.url,
@@ -28,30 +29,6 @@ export default {
       this.url = ''
 
       this.$emit('newUrl', this.id.toString())
-      /*
-      localStorage.setItem(this.id, fetch('shorten', {
-        method: 'post',
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          url: this.url
-        })
-        .then(res => {
-          res.json().then(data => ({
-            data: data,
-            satus: res.satus
-          }))
-        }).then(res => {
-        if (res.status == 200) {
-            this.id = res.data.id
-          } else {
-            this.id = Math.floor((Math.random() * 10000) + 1)
-          }
-          localStorage.setItem(this.id, this.url)
-        }).catch(err => (console.log(err)))
-      }))*/
     }
   }
 }

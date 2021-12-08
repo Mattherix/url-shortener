@@ -15,6 +15,7 @@ import Url from './components/Url.vue'
 import './assets/tailwind.css'
 
 function localStorageItems() {
+  /* List of item in localStorage */
   let ans = []
   for (let i = 0; i < localStorage.length; i++) {
     ans.push(localStorage.key(i))
